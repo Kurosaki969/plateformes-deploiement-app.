@@ -1,29 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deployment Platforms</title>
+  <title>Plateformes de Déploiement</title>
   <!-- Lien vers le fichier CSS externe -->
   <link rel="stylesheet" href="style.css">
 </head>
-  <link rel="stylesheet" href="style.css">
 <body>
-  <!-- Tout votre contenu HTML ici -->
-
   <header>
     <h1>Plateformes de Déploiement</h1>
   </header>
 
-  <!-- ... (le reste de votre HTML) ... -->
+  <p class="description">
+    Découvrez les meilleures plateformes pour déployer vos applications web. Cliquez sur une carte de plateforme pour visiter son site web.
+  </p>
+
+  <div class="platform-container">
+    <!-- Plateformes existantes -->
+    <div class="platform">
+      <h2>Netlify</h2>
+      <p>Déployez des sites statiques facilement avec le CI/CD puissant de Netlify.</p>
+      <button class="blue" onclick="window.open('https://www.netlify.com', '_blank')">Ouvrir</button>
+    </div>
+    <div class="platform">
+      <h2>Vercel</h2>
+      <p>Déployez vos sites JAMstack rapidement avec l'intégration transparente de Vercel.</p>
+      <button class="purple" onclick="window.open('https://www.vercel.com', '_blank')">Ouvrir</button>
+    </div>
+    <div class="platform">
+      <h2>GitHub Pages</h2>
+      <p>Hébergez des sites web statiques directement depuis votre dépôt GitHub.</p>
+      <button class="yellow" onclick="window.open('https://pages.github.com', '_blank')">Ouvrir</button>
+    </div>
+    <div class="platform">
+      <h2>Heroku</h2>
+      <p>Déployez des applications web dynamiques facilement sur la plateforme cloud de Heroku.</p>
+      <button class="red" onclick="window.open('https://www.heroku.com', '_blank')">Ouvrir</button>
+    </div>
+    <div class="platform">
+      <h2>Render</h2>
+      <p>Déployez des applications full-stack et des sites statiques avec l'infrastructure moderne de Render.</p>
+      <button class="blue" onclick="window.open('https://www.render.com', '_blank')">Ouvrir</button>
+    </div>
+    <!-- Plateformes additionnelles -->
+    <div class="platform">
+      <h2>DigitalOcean</h2>
+      <p>Évoluez vos applications avec l'infrastructure cloud simple de DigitalOcean.</p>
+      <button class="purple" onclick="window.open('https://www.digitalocean.com', '_blank')">Ouvrir</button>
+    </div>
+    <div class="platform">
+      <h2>AWS</h2>
+      <p>Utilisez Amazon Web Services pour des solutions cloud robustes et évolutives.</p>
+      <button class="yellow" onclick="window.open('https://aws.amazon.com', '_blank')">Ouvrir</button>
+    </div>
+    <div class="platform">
+      <h2>Google Cloud</h2>
+      <p>Déployez vos projets avec les services puissants de Google Cloud Platform.</p>
+      <button class="blue" onclick="window.open('https://cloud.google.com', '_blank')">Ouvrir</button>
+    </div>
+    <div class="platform">
+      <h2>Microsoft Azure</h2>
+      <p>Construisez, déployez et gérez des applications en utilisant les solutions cloud complètes d'Azure.</p>
+      <button class="red" onclick="window.open('https://azure.microsoft.com', '_blank')">Ouvrir</button>
+    </div>
+    <div class="platform">
+      <h2>Firebase</h2>
+      <p>Tirez parti de Firebase pour un développement rapide d'applications avec des bases de données en temps réel.</p>
+      <button class="purple" onclick="window.open('https://firebase.google.com', '_blank')">Ouvrir</button>
+    </div>
+    <div class="platform">
+      <h2>Linode</h2>
+      <p>Obtenez des serveurs Linux haute performance pour vos projets avec Linode.</p>
+      <button class="yellow" onclick="window.open('https://www.linode.com', '_blank')">Ouvrir</button>
+    </div>
+    <div class="platform">
+      <h2>Oracle Cloud</h2>
+      <p>Déployez des applications d'entreprise avec les services innovants d'Oracle Cloud.</p>
+      <button class="blue" onclick="window.open('https://www.oracle.com/cloud/', '_blank')">Ouvrir</button>
+    </div>
+    <div class="platform">
+      <h2>IBM Cloud</h2>
+      <p>Construisez et déployez des solutions avec la plateforme polyvalente d'IBM Cloud.</p>
+      <button class="red" onclick="window.open('https://www.ibm.com/cloud', '_blank')">Ouvrir</button>
+    </div>
+    <div class="platform">
+      <h2>Cloudflare Pages</h2>
+      <p>Hébergez des sites statiques avec le réseau mondial rapide de Cloudflare.</p>
+      <button class="purple" onclick="window.open('https://pages.cloudflare.com', '_blank')">Ouvrir</button>
+    </div>
+    <div class="platform">
+      <h2>Surge.sh</h2>
+      <p>Déployez rapidement des projets front-end en utilisant l'interface CLI simple de Surge.sh.</p>
+      <button class="yellow" onclick="window.open('https://surge.sh', '_blank')">Ouvrir</button>
+    </div>
+  </div>
+
+  <!-- Nouvelle section pour la fonctionnalité Gemini API -->
+  <div class="gemini-feature-container">
+    <h2>Obtenez une recommandation de plateforme ✨</h2>
+    <p class="description" style="margin-top: 0; margin-bottom: 20px; max-width: 600px;">
+      Décrivez votre projet (type d'application, exigences, budget, etc.) et laissez notre IA vous suggérer la meilleure plateforme de déploiement.
+    </p>
+    <textarea id="projectDescription" placeholder="Ex: 'Je construis une application web React avec une base de données MongoDB. J'ai besoin d'une solution évolutive et facile à configurer pour un petit budget.'"></textarea>
+    <button onclick="getPlatformRecommendation()">Obtenir une recommandation ✨</button>
+    <div id="loadingIndicator" class="loading-indicator">Chargement de la recommandation...</div>
+    <div id="geminiResponse" class="gemini-response"></div>
+  </div>
 
   <div class="support-links">
     <a href="https://github.com/Kurosaki969" target="_blank">GitHub</a>
-    <a href="https://github.com/Kurosaki969/plateformes-deploiement-app." target="_blank">Repo</a>
+    <a href="https://github.com/Kurosaki969/plateformes-deploiement-app." target="_blank">WhatsApp Bot Repo</a>
     <a href="https://whatsapp.com/channel/0029VaihcQv84Om8LP59fO3f" target="_blank">Chaîne YouTube</a>
   </div>
 
   <!-- Lien vers le fichier JavaScript externe -->
   <script src="script.js"></script>
-</body>
-</html>
