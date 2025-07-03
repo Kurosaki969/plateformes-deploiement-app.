@@ -1,0 +1,42 @@
+/* Styles généraux du corps de la page */
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #111;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Styles de l'en-tête */
+header {
+  background: url('https://source.unsplash.com/featured/?cloud,tech') no-repeat center center/cover;
+  padding: 40px 20px;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 0 0 15px 15px;
+}
+
+/* ... (le reste de votre CSS) ... */
+
+/* Styles pour la nouvelle section de la fonctionnalité Gemini API */
+.gemini-feature-container {
+  background: #222;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.7);
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 800px;
+  width: 90%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ... (le reste du CSS de la section Gemini) ... */
